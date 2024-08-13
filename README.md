@@ -141,7 +141,7 @@ public int relativeXPositionTo(Point p) {
 ```java
 public class Tamagotchi
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+
     private int x;
     private int hunger;
     private int mood;

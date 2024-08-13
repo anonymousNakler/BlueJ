@@ -153,7 +153,7 @@ public class Tamagotchi
 
     public Tamagotchi(int hungerInit, int moodInit, int fatigueInit)
     {
-        // Instanzvariable initialisieren
+
         hunger = 0;
         mood = 0;
         fatigue = 0;

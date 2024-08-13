@@ -19,23 +19,28 @@
 ## Test 1
 
 ### Frage 1
-![Aufgabe 1](https://github.com/user-attachments/assets/84d4cdb2-c1bc-4bef-9ac1-ce74ddfacefd)
+
+![Bildschirmfoto 2024-08-06 um 17 50 14](https://github.com/user-attachments/assets/0e624cb6-5ecd-4d80-b62a-64210e63f9cd)
+
 
 ### Frage 2
 
-![Aufgabe 2](https://github.com/user-attachments/assets/9dc5c8b4-b73f-4337-b6f8-e6f03eee4a33)
+![Bildschirmfoto 2024-08-06 um 17 50 20](https://github.com/user-attachments/assets/16a3f3e5-8ec0-42e5-96ed-d251474d3611)
+
 
 ### Frage 3
 
-![Aufgabe 3](https://github.com/user-attachments/assets/c8d1d3ed-dafa-4ed4-a1f7-8be8e560773d)
+![Bildschirmfoto 2024-08-06 um 17 50 25](https://github.com/user-attachments/assets/a35a2cb9-4dda-4960-b706-0b4a8a6e5616)
 
 ### Frage 4
 
-![Aufgabe 4](https://github.com/user-attachments/assets/9b10463d-b464-4f19-9519-3256752dd806)
+![Bildschirmfoto 2024-08-06 um 17 50 29](https://github.com/user-attachments/assets/6d5f1a29-ec19-4c64-aa88-d40106240d78)
+
 
 ### Frage 5 
 
-![Aufgabe 5](https://github.com/user-attachments/assets/8e99bbc2-02ab-40c7-a864-829dcfd0455d)
+![Bildschirmfoto 2024-08-06 um 17 50 33](https://github.com/user-attachments/assets/28e823d7-3f5c-49be-b00a-674d6dee4be1)
+
 
 ### Frage 6
 ```java
@@ -66,16 +71,18 @@ public void langsamBewegen(int schritte, int xRichtung, int yRichtung) {
 
 ### Frage 1
 
-<img width="1332" alt="Aufgabe 1" src="https://github.com/user-attachments/assets/c194e88a-37d8-4ac2-9c74-508814cd3d3c">
+<img width="1332" alt="v" src="https://github.com/user-attachments/assets/34adecaf-738e-4031-8683-14674eed8807">
 
 ### Frage 2
 
-<img width="1351" alt="Aufgabe 2" src="https://github.com/user-attachments/assets/52ba407f-3271-450f-8adc-ba3ccf2a59a3">
+<img width="1351" alt="a" src="https://github.com/user-attachments/assets/d82a671d-d1d0-4231-ac2b-8f37c84fb993">
+
 
 ### Frage 3
 
-<img width="1338" alt="Aufgabe 3" src="https://github.com/user-attachments/assets/fd275121-f89f-46ec-9909-1cc89688af39">
-<img width="1201" alt="Aufgabe 4" src="https://github.com/user-attachments/assets/4c303dc9-604a-48e3-9d98-416d5f594b37">
+<img width="1338" alt="Frage 6" src="https://github.com/user-attachments/assets/0359730e-9feb-4576-a1ca-259db9891b86">
+<img width="1201" alt="Frage 6" src="https://github.com/user-attachments/assets/44f78845-1363-4c62-994a-14dce582f54c">
+
 
 ### Frage 4
 ```java
@@ -107,11 +114,13 @@ public class Module {
 
 ### Frage 5
 
-<img width="1348" alt="Aufgabe 5" src="https://github.com/user-attachments/assets/b4480fc7-82c4-4a7c-ae0b-7b26d259923c">
+
+<img width="1348" alt="Frage 6" src="https://github.com/user-attachments/assets/3e1e4167-d970-4532-9423-4632fe92b676">
 
 ### Frage 6
 
-<img width="1347" alt="Aufgabe 6" src="https://github.com/user-attachments/assets/8ece72fe-b173-49ba-bb11-96874ee68957">
+<img width="1347" alt="Frage 6" src="https://github.com/user-attachments/assets/27914fd8-f8e1-404f-b68c-f4add199622b">
+
 
 ### Frage 7 
 ```java

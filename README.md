@@ -1,5 +1,5 @@
 # Musterlösungen
->[!IMPORTANT]
+>[!WICHTIG]
 >
 > Die Lösungen sind alle geprüft richtig für den Jahrgang I23.
 > Je länger dieses Repo vor den falschen Augen geschützt wird, desto länger haben Studierende etwas davon. 

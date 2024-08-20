@@ -16,7 +16,7 @@
 
 [Test 2](#Test-2)
 
-[Test 3-1](#Test-3.1)
+[Test 3](#Test-3_1)
 
 ## Test 1
 
@@ -239,7 +239,7 @@ public class Tamagotchi
 }
 ```
 
-## Test 3.1
+## Test 3_1
 
 ### Frage 1
 

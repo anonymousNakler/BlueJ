@@ -16,30 +16,32 @@
 
 [Test 2](#Test-2)
 
+[Test 3-1](#Test-3-1)
+
 ## Test 1
 
 ### Frage 1
 
-![Bildschirmfoto 2024-08-06 um 17 50 14](https://github.com/user-attachments/assets/0e624cb6-5ecd-4d80-b62a-64210e63f9cd)
+![Bild](https://github.com/user-attachments/assets/0e624cb6-5ecd-4d80-b62a-64210e63f9cd)
 
 
 ### Frage 2
 
-![Bildschirmfoto 2024-08-06 um 17 50 20](https://github.com/user-attachments/assets/16a3f3e5-8ec0-42e5-96ed-d251474d3611)
+![x](https://github.com/user-attachments/assets/16a3f3e5-8ec0-42e5-96ed-d251474d3611)
 
 
 ### Frage 3
 
-![Bildschirmfoto 2024-08-06 um 17 50 25](https://github.com/user-attachments/assets/a35a2cb9-4dda-4960-b706-0b4a8a6e5616)
+![x](https://github.com/user-attachments/assets/a35a2cb9-4dda-4960-b706-0b4a8a6e5616)
 
 ### Frage 4
 
-![Bildschirmfoto 2024-08-06 um 17 50 29](https://github.com/user-attachments/assets/6d5f1a29-ec19-4c64-aa88-d40106240d78)
+![x](https://github.com/user-attachments/assets/6d5f1a29-ec19-4c64-aa88-d40106240d78)
 
 
 ### Frage 5 
 
-![Bildschirmfoto 2024-08-06 um 17 50 33](https://github.com/user-attachments/assets/28e823d7-3f5c-49be-b00a-674d6dee4be1)
+![x](https://github.com/user-attachments/assets/28e823d7-3f5c-49be-b00a-674d6dee4be1)
 
 
 ### Frage 6
@@ -237,3 +239,56 @@ public class Tamagotchi
 }
 ```
 
+## Test 3 - 1
+
+### Frage 1
+
+<img width="1306" alt="Bildschirmfoto 2024-08-20 um 14 50 25" src="https://github.com/user-attachments/assets/7c072d4a-f0e9-4993-9dc5-cbc2ad8dfe92">
+
+### Frage 2
+
+<img width="1297" alt="Bildschirmfoto 2024-08-20 um 14 50 37" src="https://github.com/user-attachments/assets/5b55b2b5-956b-4a65-b6d3-e7fc911c87d5">
+
+### Frage 3
+```java
+for (int i = 12; i <= 99; i+= 3) {
+        System.out.println(i);
+        }
+```
+
+### Frage 4
+```java
+public void printStars(int number){
+    for (int i = 0; i < number; i++) {
+            System.out.print("*");
+        }
+}
+
+public void printTriangle(int number){
+        for (int i = 1; i <= number; i++) {
+            printStars(i);
+            System.out.println("");
+        }
+    
+    }
+
+public void printDiamond(int number){
+        int breite = 2 * number + 1;
+        for (int i = 1; i <= breite; i+= 2){
+            printLeerzeichen((breite - i) / 2);
+            printStars(i);
+            System.out.println(" ");
+        }
+        for (int i = breite - 2; i > 0; i-= 2){
+            printLeerzeichen((breite - i) / 2);
+            printStars(i);
+            System.out.println(" ");
+        }
+    }
+
+    public void printLeerzeichen (int number) {
+        for (int i = 0; i < number; i++) {
+            System.out.print(" ");
+        }
+    }
+```

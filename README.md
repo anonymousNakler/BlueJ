@@ -16,7 +16,9 @@
 
 [Test 2](#Test-2)
 
-[Test 3](#Test-3_1)
+[Test 3.1](#Test-3_1)
+[Test 3.2](#Test-3_2)
+[Test 3.3](#Test-3_3)
 
 ## Test 1
 
@@ -164,13 +166,10 @@ public class Tamagotchi
         fatigueTreshhold = fatigueInit;
     }
     
-    private boolean isHungry(){
-        if (hunger > hungerThreshhold){
-            return true;
-        } else {
-            return false;
-        }
+   public boolean isHungry() {
+        return hunger > hungerThreshhold;
     }
+
     
     private boolean isHappy(){
         if (mood > moodThreshhold){
@@ -188,11 +187,11 @@ public class Tamagotchi
         }
     }
     
-    public void play (){
-        if (isHungry() == false){
-            hunger = hunger + 2;
-            mood = mood + 2;
-            fatigue = fatigue + 3;
+    public void play() {
+        if (!isHungry()) {
+            hunger += 2;
+            mood += 2;
+            fatigue += 3;
         }
     }
     
@@ -292,3 +291,293 @@ public void printDiamond(int number){
         }
     }
 ```
+
+## Test 3_2
+
+### Frage 1
+```java
+public class Month {
+    private final int month;
+    private int[] hourCounts;
+    public Month(int m){
+        month = m;
+    }
+  
+    
+    public boolean isRMonth(){
+        if (((month % 12) >= 0 && (month % 12) < 5) || (((month % 12) >= 9 && (month % 12) < 12))) {
+        return true;
+    }
+    else if (((month % 12) > -4 && (month % 12) <= 0) || ((month % 12) < -7 && (month % 12) > -12) ){
+        return true;
+    }
+    else return false;
+}
+    
+}
+
+
+```
+### Frage 2
+```java
+public int crossTotal(int n){
+    int summe = 0;
+    while (n > 0) {
+        summe += n % 10;
+        n = n / 10;
+    }
+    return summe;
+    }
+```
+### Frage 3
+```java
+public int crossTotal(int n){ //bestanden
+    int summe = 0;
+    while (n > 0) {
+        summe += n % 10;
+        n = n / 10;
+    }
+    return summe;
+    }
+    
+    public int repeatedCrossTotal(int n) {
+        int summe2 = 0;
+        while (n > 9) {
+            n = crossTotal (n);
+        }
+        return n;
+    }
+```
+### Frage 4
+```java
+public class PrimeTester{
+    private int why = 10;
+    public void divisors(int n){
+        System.out.print("Teiler von " + n + " sind ");
+        for (int i = 1; i < n; i++) {
+            if (n % i == 0) {
+                System.out.print(i + ", ");
+            }
+            
+        }
+        while (why == 10) {
+        why -= 1;
+        }
+        System.out.print(n);
+    }
+    
+    public void properDivisors(int n) {
+    System.out.print("Echte Teiler von " + n + " sind ");
+    boolean first = true;  // To handle comma placement
+    for (int i = 2; i < n; i++) {  // Start from 2 to exclude 1
+        if (n % i == 0) {  // If 'i' is a divisor of 'n'
+            if (!first) {
+                System.out.print(", ");
+            }
+            System.out.print(i);
+            first = false;  // Set false after the first divisor is printed
+        }
+    }
+    System.out.println();  // New line at the end of the output
+}
+
+    
+    public boolean isPrime(int n) {
+        if (n == 1) return false;
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    
+    public void teilerSpeichern (int n) {
+        boolean [] teiler = new boolean[n];
+        for (int i = 0; i < n; i++) {
+            teiler [i] = n % (i + 1) == 0;
+        }
+        
+        for (int i = 0; i < n; i++) {
+            if (teiler[i]) {
+                System.out.println((i+2) + " ist ein Teiler von " + n);
+            }
+        }
+    }
+    
+}
+```
+
+## Test 3_3
+
+### Frage 1
+
+<img width="1197" alt="Bildschirmfoto 2024-08-26 um 21 21 06" src="https://github.com/user-attachments/assets/ed00b962-a0b8-4af0-aa95-eef68ab018c7">
+
+
+### Frage 2
+```java
+
+        String[] spruch = {"Ich", "finde", "Java", "Spitze"};
+
+        System.out.println(spruch[0]);
+        System.out.println(spruch[1]);
+        System.out.println(spruch[2]);
+        System.out.println(spruch[3]);
+```
+
+### Frage 3
+```java
+public void printNumbers(int [] numbers){
+
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+    
+}
+```
+
+### Frage 4
+```java
+public int totalLength(String[] words){
+        int incr = 0;
+        	
+
+        for (int i = 0; i < words.length; i++) {
+            if (words[i] != null) incr += words[i].length();
+        }
+        return incr;
+    }
+```
+
+### Frage 5
+```java
+public int luhn(int [] digits){
+        x2every2nd(digits);
+        int sum = crossTotalArray(digits);
+        sum = sum % 10;
+        sum = 10 - sum;
+        sum = sum % 10;
+        digits = appendCheckdigit (digits, sum);
+        return sum;
+    }
+    
+    public int [] appendCheckdigit (int [] digits, int checkDigit) {
+        int [] fullDigits = new int [digits.length + 1];
+        for (int i = 0; i < digits.length; i++) {
+            fullDigits [i] = digits [i];
+        }
+        fullDigits [digits.length] = checkDigit;
+        return fullDigits;
+    }
+    
+    public int [] x2every2nd (int [] digits) {
+        for (int i = 0; i < digits.length; i++) {
+            if (i % 2 == 0) {
+                digits [i] = 2 * digits[i]; 
+            }
+        }
+        return digits;
+    }
+    
+    public int crossTotalArray (int [] digits) {
+        for (int i = 0; i < digits.length; i++) {
+            digits [i] = crossTotal (digits [i]);
+        }
+        int sum = 0;
+        for (int i = 0; i < digits.length; i++) {
+            sum += digits [i];
+        }
+        return sum;
+    }
+    
+    public int crossTotal (int zahl) {
+        int summe = 0;
+        while (zahl != 0) {
+            summe += zahl % 10;
+            zahl = zahl / 10;
+        }
+        return summe;
+    }
+```
+
+### Frage 6
+```java
+private boolean [] lon; //list of numbers
+
+    
+    
+    public boolean [] sieve (int n) {
+        lon = new boolean [n - 1];
+        lon = falsify(lon);
+        for (int i = 0; i < lon.length; i++) {
+            lon = mark(lon, (i + 2));
+        }
+        return lon;
+    }
+    
+    private boolean [] falsify (boolean [] lon) {
+        for (int i = 0; i < lon.length; i++) {
+            lon [i] = false;
+        }
+        return lon;
+    }
+    
+    private boolean [] mark (boolean [] lon, int k) {
+        for (int i = 0; i < lon.length; i++) {
+            if ((i + 2) != k && (i + 2) % k == 0) {
+                lon [i] = true;
+            }
+        }
+        return lon;
+    }
+```
+### Frage 7
+```java
+private int [][] chessBoard;
+public int[][] chessBoard(){
+        chessBoard = new int [8][8];
+        for (int i = 0; i < chessBoard.length; i++) {
+            for (int j = 0; j < chessBoard[i].length; j++) {
+                if (i % 2 == 0) { //gerade Zeilen, Restklasse 0
+                    if (j % 2 == 0) { //gerade Elemente in Zeile gez. ab 0
+                        chessBoard[i][j] = 0;
+                    } else {
+                        chessBoard [i][j] = 1;
+                    }
+                } else if (i % 2 == 1) { //ungerade Zeile RK = 1
+                   if (j % 2 == 0) {
+                       chessBoard[i][j] = 1;
+                   } else {
+                       chessBoard [i][j] = 0;
+                   }
+                }
+            }
+        }
+        return chessBoard;
+    }
+```
+
+### Frage 8
+```java
+public int[][] bino(int rows){
+        int[][] pascalTriangle = new int[rows][];
+     
+        for (int i = 0; i < rows; i++) {
+            pascalTriangle[i] = new int[i+1];
+            
+            for (int j = 0; j <= i; j++) {
+                if (j == 0 || i == j) {
+                    pascalTriangle [i][j] = 1;
+                } else {
+                    pascalTriangle [i][j] = pascalTriangle[i - 1][j - 1] + pascalTriangle [i -1][j];
+                }
+            }
+        }
+        return pascalTriangle;
+    }
+```
+
+
+

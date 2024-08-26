@@ -93,13 +93,13 @@ public void langsamBewegen(int schritte, int xRichtung, int yRichtung) {
 public class Module {
     private String code;
     private String name;
-    private int kontaktStunden;
+    private int contactHours;
     public Module(String _code, String _name){
         code=_code;
         name=_name;
     }
     public void setName(String _name){
-        name=_name;
+        name = _name;
     }
     public String getName(){
         return name;
@@ -108,10 +108,10 @@ public class Module {
         return code;
     }
     public int getContactHours () {
-        return kontaktStunden;
+        return contactHours;
     }
     public void setContactHours (int stunden) {
-        kontaktStunden = stunden;
+        contactHours = stunden;
     }
 }
 ```

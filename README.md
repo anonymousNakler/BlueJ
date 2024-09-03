@@ -559,6 +559,20 @@ public int[][] chessBoard(){
     }
 ```
 
+```java
+//oder eleganter:
+
+public int[][] chessBoard() {
+    int[][] schachBrett = new int[8][8];
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            schachBrett[i][j] = (i + j) % 2; // 1 für Weiß, 0 für Schwarz
+        }
+    }
+    return schachBrett;
+}
+```
+
 ### Frage 8
 ```java
 public int[][] bino(int rows){

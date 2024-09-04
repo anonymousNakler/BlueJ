@@ -20,6 +20,8 @@
 [Test 3.2](#Test-3_2)
 [Test 3.3](#Test-3_3)
 
+[Test 4](#Test-4)
+
 ## Test 1
 
 ### Frage 1
@@ -593,5 +595,106 @@ public int[][] bino(int rows){
     }
 ```
 
+## Test 1
+
+### Frage 1
+
+![image](https://github.com/user-attachments/assets/789c3cba-a00d-4bd9-b2e2-945f4bd5a3b0)
+
+### Frage 2
+
+![image](https://github.com/user-attachments/assets/8c4d2854-8162-42fe-a03e-40b1235b956a)
 
 
+### Frage 3
+
+![image](https://github.com/user-attachments/assets/cc0567d7-344c-4423-96c1-4f7bc2fe7cb4)
+
+### Frage 4
+
+![image](https://github.com/user-attachments/assets/a287e7bc-d0d1-4a4b-9de2-d2dd4e369be7)
+
+
+### Frage 5
+```java
+public class ClockDisplay {
+    private NumberDisplay hours;
+    private NumberDisplay minutes;
+    private String displayString;    
+    
+    public ClockDisplay(){
+        hours = new NumberDisplay(24);
+        minutes = new NumberDisplay(60, hours);
+        updateDisplay();
+    }
+    public ClockDisplay(int hour, int minute){
+        hours = new NumberDisplay(24);
+        minutes = new NumberDisplay(60, hours);
+        setTime(hour, minute);
+    }
+    public void timeTick(){
+        minutes.increment();
+        // if(minutes.getValue() == 0) {  
+            // hours.increment();
+        // }
+        updateDisplay();
+    }
+    public void setTime(int hour, int minute) {
+        hours.setValue(hour);
+        minutes.setValue(minute);
+        updateDisplay();
+    }
+
+    public String getTime() {
+        return displayString;
+    }
+    
+    private void updateDisplay() {
+        displayString = hours.getDisplayValue() + ":" + 
+                        minutes.getDisplayValue();
+    }
+}
+
+
+public class NumberDisplay
+{
+    private int limit;
+    private int value;
+    private NumberDisplay parent;
+    
+    public NumberDisplay(int rollOverLimit, NumberDisplay parent)    {
+        limit = rollOverLimit;
+        value = 0;
+        this.parent = parent;
+    }
+    
+    public NumberDisplay(int rollOverLimit)    {
+        limit = rollOverLimit;
+        value = 0;
+    }
+
+    public int getValue()    {
+        return value;
+    }
+
+    public String getDisplayValue()    {
+        if(value < 10) {
+            return "0" + value;
+        }
+        else {
+            return "" + value;
+        }
+    }
+
+    public void setValue(int replacementValue)    {
+        if((replacementValue >= 0) && (replacementValue < limit)) {
+            value = replacementValue;
+        }
+    }
+
+    public void increment() {
+        if ((value + 1) == limit && parent != null) parent.increment();
+        value = (value + 1) % limit;
+    }
+}
+```

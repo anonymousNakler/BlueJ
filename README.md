@@ -22,6 +22,8 @@
 
 [Test 4](#Test-4)
 
+[Test 5](#Test-5)
+
 ## Test 1
 
 ### Frage 1
@@ -698,3 +700,60 @@ public class NumberDisplay
     }
 }
 ```
+
+## Test 5
+
+### Frage 1
+![image](https://github.com/user-attachments/assets/0b7cd51c-9cab-422d-9b7c-fd9db4ae00f2)
+
+### Frage 2
+![image](https://github.com/user-attachments/assets/b677f88f-b1ff-467c-9e3e-6bc1ee6c0c46)
+
+
+### Frage 3
+![image](https://github.com/user-attachments/assets/f19d6717-70f0-4a6e-a44e-5a2c3bcab5f2)
+
+
+### Frage 4
+![image](https://github.com/user-attachments/assets/72be54b2-a299-452a-8f29-aa0c395f2664)
+
+### Frage 5
+```java
+public ArrayList<String> unify(ArrayList<String> input){
+        ArrayList <String> result = new ArrayList<>();
+        for (String s: input) {
+            if (!result.contains(s)) {
+                if (s != null) {
+                    result.add(s);
+                }
+            }
+        }
+        return result;
+    }
+```
+### Frage 6
+```java
+public ArrayList<String> unify(ArrayList<String> input){
+        ArrayList <String> result = new ArrayList<>();
+        int n = 0;
+        while (n < input.size()) {
+            if (!result.contains(input.get(n))) {
+                if (input.get(n) != null) {
+                    result.add(input.get(n));
+                }
+            }
+            n++;
+        }
+        return result;
+    }
+```
+### Frage 7
+```java
+
+```
+### Frage 8
+```java
+
+```
+
+

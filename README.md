@@ -753,10 +753,190 @@ public ArrayList<String> unify(ArrayList<String> input){
 ```
 ### Frage 8
 ```java
-// später...
+public void deleteTabu(ArrayList<String> posts, String tabu){
+    Iterator<String> i = posts.iterator();
+    while (i.hasNext()){
+        String hs = i.next();
+        if (hs != null && hs.contains(tabu)) {
+            i.remove();
+             }
+        }
+    }
 ```
 ### Frage 9
 ```java
-// später...
+// shoppingBasket
+import java.util.*;
+public class ShoppingBasket
+{
+    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+    private Catalog catalog;
+    private ArrayList<String> basket = new ArrayList<> ();
+
+    public ShoppingBasket(Catalog catalog)
+    {
+        this.catalog = catalog;
+
+    }
+
+    public void addItem(String name) {
+        if (catalog.hasProduct(name)) {
+            basket.add(name);
+        }
+    }
+
+    private int fullPrice() {
+        int akku = 0;
+        for (String s : basket) {
+            akku += catalog.getProductPrice(s);
+        }
+        return akku;
+    }
+
+    public void print() {
+        System.out.println("+-----------------------------------+-------+");
+        System.out.println("|Pos|Produkt                        |Preis  |");
+        System.out.println("+---+-------------------------------+-------+");
+        for (int i = 0; i < basket.size(); i++) {
+            String prod = basket.get(i);
+            System.out.print("|  " + (i + 1) + "|");
+            if (prod.length() < 31) {
+                System.out.print(prod);
+                printSpaces(31-prod.length());
+            } else {
+                System.out.print(prod.substring( 0, 31));
+            }
+            String preisAlsString = priceToString(catalog.getProductPrice(prod));
+            System.out.print("|");
+            printSpaces(6 - preisAlsString.length());
+            System.out.print(preisAlsString + "€");
+            System.out.println("|");
+            // System.out.print("|  0,90|");
+        }
+        System.out.println("+---+-------------------------------+-------+");
+        System.out.print("|                             Summe: ");
+        String fullPriceString = priceToString(fullPrice());
+        printSpaces(6 - fullPriceString.length());
+        System.out.print(fullPriceString);
+        System.out.println(" |");
+        System.out.print("+---+-------------------------------+-------+");
+    }
+    
+    private void printSpaces (int n) {
+        int x = 0;
+        while (x < n) {
+            System.out.print(" ");
+            x++;
+        }
+    }
+    
+    private String priceToString(int price) {   
+        float pricex = price;
+        float stringPrice = pricex / 100;
+        String formatted = String.format("%.2f", stringPrice);
+        String result = formatted.replace('.', ',');
+        return formatted;
+    }
+    
+    public void deleteItem (int n) {
+        if (basket.get(n - 1) != null) {
+            basket.remove(n - 1);
+        } else {
+            System.out.print("There is no item at the position number given!");
+        }
+    }
+    
+    public void deleteItems (String item) {
+        for (int i = 0; i < basket.size(); i++) {
+            if (basket.get(i).equals(item)) {
+                basket.remove(i);
+            }
+        }
+    }
+    
+    public void sortByName () {
+        Collections.sort(basket);
+    }
+    
+    public void printPackList () {
+        System.out.println("+-------------------------------+-------+");
+        System.out.println("|Produkt                        |Anzahl |");
+        System.out.println("+-------------------------------+-------+");
+        for (int i = 0; i < totalProducts(basket); i++) {
+            
+        }
+    }
+    
+    private int totalProducts(ArrayList basket){
+        
+    }
+}
+
+// catalog
+import java.util.ArrayList;
+
+class Catalog {
+
+    private class Entry implements Comparable<Entry> {
+        String product;
+        Integer price;
+
+        public Entry(String name, int priceInCent) {
+            product = name;
+            price = priceInCent;
+        }
+
+        @Override
+        public int compareTo(Entry o) {
+            return product.compareTo(o.product);
+        }
+
+    }
+
+    private ArrayList<Entry> products;
+
+    /**
+     * Constructor for objects of class Catalog
+     */
+    public Catalog() {
+        products = new ArrayList<>();
+    }
+
+    public void addProduct(String name, int priceInCent) {
+        if (!hasProduct(name)) {            
+            products.add(new Entry(name, priceInCent));
+        }
+    }
+
+    public void deleteProduct(String name) {
+        products.removeIf(p -> p.product.equals(name));            
+    }
+
+    public void updateProduct(String name, int priceInCent) {
+        if (hasProduct(name)) {
+            deleteProduct (name);
+            addProduct(name, priceInCent);
+        } 
+    }
+
+    private String priceToString(int price) {        
+        return price / 100 + "€";
+    }
+
+    public boolean hasProduct(String name) {
+        return products.stream().anyMatch(p -> name.equals(p.product));
+    }
+
+    public int getProductPrice(String name) {
+        return products.stream().filter(p -> name.equals(p.product)).findAny().get().price;
+    }
+
+    public void showProduct(String name) {
+        if (hasProduct(name)) {
+            int price = getProductPrice(name);
+            System.out.println(name + ": " + priceToString(price));
+        } 
+    }
+}
 ```
 

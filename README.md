@@ -749,7 +749,23 @@ public ArrayList<String> unify(ArrayList<String> input){
 ```
 ### Frage 7
 ```java
-// später...
+public  List<String> arrayToList(String[] strings){
+        ArrayList<String> resultList = new ArrayList<>();
+        if (strings == null) return null;
+        for (int i = 0; i < strings.length; i++) {
+            resultList.add(strings[i]);
+        }
+        return resultList;
+    }
+    
+    public String[] listToArray(List<String> list){
+        if (list == null) return null;
+        String [] resultArray = new String[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            resultArray[i] = list.get(i);
+        }
+        return resultArray;
+    }
 ```
 ### Frage 8
 ```java

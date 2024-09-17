@@ -939,19 +939,21 @@ public class Do implements IDo {
 }
 ```
 
-### Frage X
+### Frage _Gegeben sei folgendes Interface_
 ![image](https://github.com/user-attachments/assets/d6390126-9526-427b-8cdf-692ecbf74562)
 
-### Frage X
+### Frage _Welchen Nutzen kann man durch Interfaces realisieren?_
 ![image](https://github.com/user-attachments/assets/3ab5d94a-baf2-40f6-92e6-19842884175f)
 
-### Frage X
+### Frage _Welche der folgenden Aussagen sind wahr?_
 ![image](https://github.com/user-attachments/assets/af5719c6-3783-4a29-a771-4d5d92714982)
 
-
+### Frage _Welche der folgenden Aussagen sind richtig? Sie können mehrere auswählen._
 ![image](https://github.com/user-attachments/assets/28293b6a-895f-49e4-8218-d7581048eadc)
 
-### FRAGE X
+### FRAGE NewsFeed
+<details>
+    
 ```java
 //import Statements für alle Klassen und Interfaces
 import java.util.*;
@@ -1125,3 +1127,4 @@ public interface IPost
     void display();
 }
 ```
+</details>

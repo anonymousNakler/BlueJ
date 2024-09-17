@@ -24,6 +24,8 @@
 
 [Test 5](#Test-5)
 
+[Test 9](#Test-9)
+
 ## Test 1
 
 ### Frage 1
@@ -925,6 +927,201 @@ public class ShoppingBasket
     }
 }
 
-
+```
+## Test 9
+### Frage X - ACHTUNG ZUFAELLIGE REIHENFOLGE
+```java
+public class Do implements IDo {
+    public Do () {}
+    public int doIt() {
+        return 7;
+    }
+}
 ```
 
+### Frage X
+![image](https://github.com/user-attachments/assets/d6390126-9526-427b-8cdf-692ecbf74562)
+
+### Frage X
+![image](https://github.com/user-attachments/assets/3ab5d94a-baf2-40f6-92e6-19842884175f)
+
+### Frage X
+![image](https://github.com/user-attachments/assets/af5719c6-3783-4a29-a771-4d5d92714982)
+
+
+![image](https://github.com/user-attachments/assets/28293b6a-895f-49e4-8218-d7581048eadc)
+
+### FRAGE X
+```java
+//import Statements für alle Klassen und Interfaces
+import java.util.*;
+//-----------------------------------------------------------------------------------------
+public class NewsFeed{
+    private ArrayList<IPost> posts;
+
+    public NewsFeed() {
+        posts = new ArrayList<>();
+    }
+
+    public void addPost(IPost post) {
+        posts.add(post);
+    }
+
+    public void show() {
+        for(IPost post : posts) {
+            post.display();
+            System.out.println();   // empty line between posts
+        }
+    }
+}
+//--------------------------------------------------------------------------------------
+public class MessagePost implements IPost{
+    private String username;  // username of the post's author
+    private String message;   // an arbitrarily long, multi-line message
+    private long timestamp;
+    private int likes;
+    private ArrayList<String> comments;
+
+    public MessagePost(String author, String text)    {
+        username = author;
+        message = text;
+        timestamp = System.currentTimeMillis();
+        likes = 0;
+        comments = new ArrayList<>();
+    }
+
+    public void like()   {
+        likes++;
+    }
+
+    public void unlike(){
+        if (likes > 0) {
+            likes--;
+        }
+    }
+
+    public void addComment(String text)    {
+        comments.add(text);
+    }
+
+    public String getText()    {
+        return message;
+    }
+
+    public long getTimeStamp() {
+        return timestamp;
+    }
+
+    public void display() {
+        System.out.println(username);
+        System.out.println(message);
+        System.out.print(timeString(timestamp));
+        
+        if(likes > 0) {
+            System.out.println("  -  " + likes + " people like this.");
+        }
+        else {
+            System.out.println();
+        }
+        
+        if(comments.isEmpty()) {
+            System.out.println("   No comments.");
+        }
+        else {
+            System.out.println("   " + comments.size() + " comment(s). Click here to view.");
+        }
+    }
+
+    private String timeString(long time) {
+        long current = System.currentTimeMillis();
+        long pastMillis = current - time;      // time passed in milliseconds
+        long seconds = pastMillis/1000;
+        long minutes = seconds/60;
+        if(minutes > 0) {
+            return minutes + " minutes ago";
+        }
+        else {
+            return seconds + " seconds ago";
+        }
+    }
+}
+//----------------------------------------------------------------
+public class PhotoPost implements IPost {
+    private String username;  // username of the post's author
+    private String filename;  // the name of the image file
+    private String caption;   // a one line image caption
+    private long timestamp;
+    private int likes;
+    private ArrayList<String> comments;
+
+    public PhotoPost(String author, String filename, String caption){
+        username = author;
+        this.filename = filename;
+        this.caption = caption;
+        timestamp = System.currentTimeMillis();
+        likes = 0;
+        comments = new ArrayList<>();
+    }
+
+    public void like() {
+        likes++;
+    }
+
+    public void unlike()    {
+        if (likes > 0) {
+            likes--;
+        }
+    }
+    public void addComment(String text)  {
+        comments.add(text);
+    }
+
+    public String getImageFile(){
+        return filename;
+    }
+
+    public String getCaption() {
+        return caption;
+    }
+
+    public long getTimeStamp() {
+        return timestamp;
+    }
+
+    public void display()   {
+        System.out.println(username);
+        System.out.println("  [" + filename + "]");
+        System.out.println("  " + caption);
+        System.out.print(timeString(timestamp));
+        
+        if(likes > 0) {
+            System.out.println("  -  " + likes + " people like this.");
+        } else {
+            System.out.println();
+        }
+        if(comments.isEmpty()) {
+            System.out.println("   No comments.");
+        } else {
+            System.out.println("   " + comments.size() + " comment(s). Click here to view.");
+        }
+    }
+    
+    private String timeString(long time){
+        long current = System.currentTimeMillis();
+        long pastMillis = current - time;      // time passed in milliseconds
+        long seconds = pastMillis/1000;
+        long minutes = seconds/60;
+        if(minutes > 0) {
+            return minutes + " minutes ago";
+        }
+        else {
+            return seconds + " seconds ago";
+        }
+    }
+}
+//----------------------------------------------------------------
+public interface IPost
+{
+    void display();
+}
+```

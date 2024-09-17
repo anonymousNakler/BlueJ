@@ -82,6 +82,7 @@ public void langsamBewegen(int schritte, int xRichtung, int yRichtung) {
 
 ## Test 2
 <details>
+    <summary>Inhalt</summary>
 ### Frage 1
 
 <img width="1332" alt="v" src="https://github.com/user-attachments/assets/34adecaf-738e-4031-8683-14674eed8807">
@@ -248,9 +249,12 @@ public class Tamagotchi
 ```
 </details>
 
-<details>
+
 ## Test 3_1
 
+<details>
+    <summary>Test 3_1</summary>
+    
 ### Frage 1
 
 <img width="1306" alt="Bildschirmfoto 2024-08-20 um 14 50 25" src="https://github.com/user-attachments/assets/7c072d4a-f0e9-4993-9dc5-cbc2ad8dfe92">
@@ -308,6 +312,8 @@ public void printDiamond(int number){
 ## Test 3_2
 
 <Details> 
+     <summary>Test 3_2</summary>
+    
 ### Frage 1
 ```java
 public class Month {
@@ -430,6 +436,7 @@ public class PrimeTester{
 ## Test 3_3
 
 <Details>
+ <summary>Test 3_3</summary>
     
 ### Frage 1
 
@@ -618,7 +625,7 @@ public int[][] bino(int rows){
 ## Test 4
 
 <Details>
-    
+     <summary>Test 4</summary>
 
 ### Frage 1
 
@@ -725,6 +732,7 @@ public class NumberDisplay
 
 ## Test 5
 <Details>
+  <summary>Test 5</summary>
 
 ### Frage 1
 ![image](https://github.com/user-attachments/assets/0b7cd51c-9cab-422d-9b7c-fd9db4ae00f2)
@@ -955,6 +963,7 @@ public class ShoppingBasket
 
 ## Test 9
 <Details>
+  <summary>Test 9</summary>
     
 ### Frage X - ACHTUNG ZUFAELLIGE REIHENFOLGE
 ```java

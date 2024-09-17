@@ -953,6 +953,7 @@ public class Do implements IDo {
 
 ### FRAGE NewsFeed
 <details>
+<summary>Code</summary>
     
 ```java
 //import Statements für alle Klassen und Interfaces

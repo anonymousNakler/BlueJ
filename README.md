@@ -81,7 +81,7 @@ public void langsamBewegen(int schritte, int xRichtung, int yRichtung) {
 </details>
 
 ## Test 2
-
+<details>
 ### Frage 1
 
 <img width="1332" alt="v" src="https://github.com/user-attachments/assets/34adecaf-738e-4031-8683-14674eed8807">
@@ -246,7 +246,9 @@ public class Tamagotchi
     }
 }
 ```
+</details>
 
+<details>
 ## Test 3_1
 
 ### Frage 1
@@ -301,8 +303,11 @@ public void printDiamond(int number){
     }
 ```
 
+</details>
+
 ## Test 3_2
 
+<Details> 
 ### Frage 1
 ```java
 public class Month {
@@ -338,7 +343,11 @@ public int crossTotal(int n){
     return summe;
     }
 ```
+
+</Details>
+
 ### Frage 3
+
 ```java
 public int crossTotal(int n){ //bestanden
     int summe = 0;
@@ -420,6 +429,8 @@ public class PrimeTester{
 
 ## Test 3_3
 
+<Details>
+    
 ### Frage 1
 
 <img width="1197" alt="Bildschirmfoto 2024-08-26 um 21 21 06" src="https://github.com/user-attachments/assets/ed00b962-a0b8-4af0-aa95-eef68ab018c7">
@@ -602,7 +613,12 @@ public int[][] bino(int rows){
     }
 ```
 
+</details>
+
 ## Test 4
+
+<Details>
+    
 
 ### Frage 1
 
@@ -705,8 +721,10 @@ public class NumberDisplay
     }
 }
 ```
+</details>
 
 ## Test 5
+<Details>
 
 ### Frage 1
 ![image](https://github.com/user-attachments/assets/0b7cd51c-9cab-422d-9b7c-fd9db4ae00f2)
@@ -930,8 +948,14 @@ public class ShoppingBasket
     }
 }
 
+
+
 ```
+</details>
+
 ## Test 9
+<Details>
+    
 ### Frage X - ACHTUNG ZUFAELLIGE REIHENFOLGE
 ```java
 public class Do implements IDo {
@@ -1281,3 +1305,5 @@ public class DuckRace {
 ```
 
 </details>
+    
+</Details>

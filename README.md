@@ -350,7 +350,7 @@ public int crossTotal(int n){
     }
 ```
 
-</Details>
+
 
 ### Frage 3
 
@@ -432,6 +432,8 @@ public class PrimeTester{
     
 }
 ```
+
+</Details>
 
 ## Test 3_3
 

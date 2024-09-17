@@ -27,7 +27,8 @@
 [Test 9](#Test-9)
 
 ## Test 1
-
+<details>
+    
 ### Frage 1
 
 ![Bild](https://github.com/user-attachments/assets/0e624cb6-5ecd-4d80-b62a-64210e63f9cd)
@@ -76,6 +77,8 @@ public void langsamBewegen(int schritte, int xRichtung, int yRichtung) {
 ```
 
 <br> 
+
+</details>
 
 ## Test 2
 

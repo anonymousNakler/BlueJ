@@ -1129,3 +1129,152 @@ public interface IPost
 }
 ```
 </details>
+
+### Frage DuckRace
+
+<details>
+    
+```java
+    import java.util.ArrayList;
+import java.util.Random;
+
+import java.util.ArrayList;
+import java.util.Random;
+public class TiringDuck implements IDuck {
+    private static final int SPEED = 10;
+    private final String name;
+    private int distance=0;
+    private int fatigue =0;
+    private final Random random = new Random();
+    public TiringDuck(String name) {
+        super();
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getDistance() {
+        return distance;
+    }
+
+    public int getFatigue() {
+        return fatigue;
+    }
+
+    public void run() {
+        fatigue+= 2*random.nextDouble()*SPEED;
+        distance += SPEED - SPEED* ( 1 - 100.0/(100+fatigue));
+    }
+
+    public String showData() {
+        return name+" Distance"+distance;
+    }
+}
+public class RandomDuck implements IDuck {
+    private static final int SPEED = 10;
+    private final String name;
+    private int distance=0;
+
+    private final Random random = new Random();
+    public RandomDuck(String name) {
+        super();
+        this.name = name;
+    }
+
+    public void run() {
+        distance += SPEED * random.nextDouble();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getDistance() {
+        return distance;
+    }
+
+    public String showData() {
+        return name+" Distance"+distance;
+    }
+
+}
+
+public interface IDuck
+{
+    int getDistance ();
+    void run ();
+    String showData();
+}
+public class SittingDuck implements IDuck {
+    private static final int SPEED = 0;
+    private final String name;
+    private int distance=0;
+    public SittingDuck(String name) {
+        super();
+        this.name = name;
+    }
+
+    public void run() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getDistance() {
+        return distance;
+    }
+
+    public String showData() {
+        return name+" Distance"+distance;
+    }
+
+}
+public class DuckRace {
+    private final int RACE_DISTANCE = 100;
+    private ArrayList<IDuck> ducks = new ArrayList<>();
+
+    public void race() {
+        while (!hasWinner()) {
+            ducksRun();
+        }
+    }
+
+    private boolean hasWinner() {
+        ArrayList<IDuck> bestDucks = new ArrayList<>();
+        int max = 0;
+        for (IDuck d : ducks) {
+            if (d.getDistance() > RACE_DISTANCE) {
+                if (d.getDistance() > max) {
+                    max = d.getDistance();
+                    bestDucks = new ArrayList<>();
+                    bestDucks.add(d);
+                } else if (d.getDistance() == max) {
+                    bestDucks.add(d);
+                }
+            }
+        }
+        if (!bestDucks.isEmpty()) {
+            for (IDuck d: bestDucks) {
+                System.out.println(d.showData());
+            }
+        }
+        return !bestDucks.isEmpty();
+    }
+
+    private void ducksRun() {
+        for (IDuck duck : ducks) {
+            duck.run();
+        }
+    }
+
+    public void addDuck (IDuck d) {
+        ducks.add(d);
+    }
+}
+
+```
+
+</details>

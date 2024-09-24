@@ -1327,6 +1327,11 @@ public class DuckRace {
 <Details>
     
   <summary>Test 10 </summary>
+
+
+<Details>
+
+<summary> Frage 1 </summary>
     
 ```java
     import java.util.*;
@@ -1502,6 +1507,22 @@ public class NewsFeed{
 }
 
 ```
+</details>
+
+### Frage 2
+<img width="1205" alt="image" src="https://github.com/user-attachments/assets/db7837a5-b723-446b-a9de-9265a20a430d">
+
+### Frage 3
+
+### Frage 4
+
+### Frage 5
+
+### Frage 6
+
+### Frage 7
+
+### Frage 8
 
 </details>
 

@@ -1529,6 +1529,9 @@ public class NewsFeed{
 
 <img width="1203" alt="image" src="https://github.com/user-attachments/assets/e79b1831-8e91-42d4-8647-c6ae3e80ed13">
 
+<img width="927" alt="image" src="https://github.com/user-attachments/assets/fbbd1a24-21e6-4de9-97b3-bccb73b25ff5">
+
+
 ### Frage 6
 
 <img width="1207" alt="image" src="https://github.com/user-attachments/assets/dff3fa11-fca8-417a-b538-4283eca3aaf4">

@@ -1536,7 +1536,8 @@ public class NewsFeed{
 
 ### Frage 7
 
-<img width="927" alt="image" src="https://github.com/user-attachments/assets/604c8ec2-45d9-4fc8-9282-cc0896dc5cc2">
+![image](https://github.com/user-attachments/assets/48923640-ac6d-4ed1-b4fc-89685d3fc33c)
+
 
 ### Frage 8
 

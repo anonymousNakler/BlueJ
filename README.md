@@ -1662,6 +1662,7 @@ public class Post implements IPost {
 ```
     
 </Details>
+
 ### Frage 9
 
 <img width="459" alt="image" src="https://github.com/user-attachments/assets/988d01e7-696c-4165-8b6e-2872171c8322">

@@ -1671,7 +1671,5 @@ public class Post implements IPost {
 
 <img width="923" alt="image" src="https://github.com/user-attachments/assets/7588a189-05f7-4c17-98f5-8a39f8f96d4e">
 
-### Frage 11
-
 </details>
 

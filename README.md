@@ -1320,6 +1320,8 @@ public class DuckRace {
 
 </details>
 
+</details>
+
 ## Test 10
 
 <Details>

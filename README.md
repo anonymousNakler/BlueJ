@@ -1332,7 +1332,7 @@ public class DuckRace {
 
 <Details>
 
-<summary> Frage 1 </summary>
+<summary> Code </summary>
     
 ```java
     import java.util.*;
@@ -1511,17 +1511,32 @@ public class NewsFeed{
 </details>
 
 ### Frage 2
+
 <img width="1205" alt="image" src="https://github.com/user-attachments/assets/db7837a5-b723-446b-a9de-9265a20a430d">
 
 ### Frage 3
 
+<img width="1221" alt="image" src="https://github.com/user-attachments/assets/b0f5912f-a337-43f0-a9cc-96dd359de31a">
+
+
 ### Frage 4
+
+<img width="1208" alt="image" src="https://github.com/user-attachments/assets/0b2b4c5f-9a56-4bc3-8b90-a061be83d306">
+
+
 
 ### Frage 5
 
+<img width="1203" alt="image" src="https://github.com/user-attachments/assets/e79b1831-8e91-42d4-8647-c6ae3e80ed13">
+
 ### Frage 6
 
+<img width="1207" alt="image" src="https://github.com/user-attachments/assets/dff3fa11-fca8-417a-b538-4283eca3aaf4">
+
 ### Frage 7
+
+<img width="1215" alt="image" src="https://github.com/user-attachments/assets/e2bde6ba-e75e-439e-88cc-2969d134c488">
+
 
 ### Frage 8
 

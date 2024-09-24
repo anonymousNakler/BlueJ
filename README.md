@@ -26,6 +26,9 @@
 
 [Test 9](#Test-9)
 
+[Test 10](#Test-10)
+
+
 ## Test 1
 <details>
     
@@ -1315,6 +1318,184 @@ public class DuckRace {
 
 ```
 
-</details>
+## Test 10
+<Details>
+  <summary>Test 10 </summary>
     
-</Details>
+```java
+    import java.util.*;
+
+public class PhotoPost extends Post{
+    private String filename;  // the name of the image file
+    private String caption;   // a one line image caption
+
+    public PhotoPost(String author, String filename, String caption){
+        super(author);
+        this.filename = filename;
+        this.caption = caption;
+    }
+
+    public void like() {
+        likes++;
+    }
+
+    public void unlike()    {
+        if (likes > 0) {
+            likes--;
+        }
+    }
+    public void addComment(String text)  {
+        comments.add(text);
+    }
+
+    public String getImageFile(){
+        return filename;
+    }
+
+    public String getCaption() {
+        return caption;
+    }
+
+    public long getTimeStamp() {
+        return timestamp;
+    }
+
+    public void display()   {
+        System.out.println(username);
+        System.out.println("  [" + filename + "]");
+        System.out.println("  " + caption);
+        System.out.print(timeString(timestamp));
+        
+        if(likes > 0) {
+            System.out.println("  -  " + likes + " people like this.");
+        } else {
+            System.out.println();
+        }
+        if(comments.isEmpty()) {
+            System.out.println("   No comments.");
+        } else {
+            System.out.println("   " + comments.size() + " comment(s). Click here to view.");
+        }
+    }
+    private String timeString(long time){
+        long current = System.currentTimeMillis();
+        long pastMillis = current - time;      // time passed in milliseconds
+        long seconds = pastMillis/1000;
+        long minutes = seconds/60;
+        if(minutes > 0) {
+            return minutes + " minutes ago";
+        }
+        else {
+            return seconds + " seconds ago";
+        }
+    }
+}
+
+public interface IPost{
+    public void display();
+}
+
+public class Post implements IPost {
+    protected String username;
+    protected long timestamp;
+    protected int likes;
+    protected ArrayList<String> comments;
+    public Post (String author) {
+        username = author;
+        timestamp = System.currentTimeMillis();
+        likes = 0;
+        comments = new ArrayList<>();
+    }
+    public void display () {
+        
+    }
+}
+
+
+public class MessagePost extends Post {
+    private String message; 
+
+    public MessagePost(String author, String text)    {
+        super(author);
+        message = text;
+    }
+
+    public void like()   {
+        likes++;
+    }
+
+    public void unlike(){
+        if (likes > 0) {
+            likes--;
+        }
+    }
+
+    public void addComment(String text)    {
+        comments.add(text);
+    }
+
+    public String getText()    {
+        return message;
+    }
+
+    public long getTimeStamp() {
+        return timestamp;
+    }
+
+    public void display() {
+        System.out.println(username);
+        System.out.println(message);
+        System.out.print(timeString(timestamp));
+        
+        if(likes > 0) {
+            System.out.println("  -  " + likes + " people like this.");
+        }
+        else {
+            System.out.println();
+        }
+        
+        if(comments.isEmpty()) {
+            System.out.println("   No comments.");
+        }
+        else {
+            System.out.println("   " + comments.size() + " comment(s). Click here to view.");
+        }
+    }
+
+    private String timeString(long time) {
+        long current = System.currentTimeMillis();
+        long pastMillis = current - time;      // time passed in milliseconds
+        long seconds = pastMillis/1000;
+        long minutes = seconds/60;
+        if(minutes > 0) {
+            return minutes + " minutes ago";
+        }
+        else {
+            return seconds + " seconds ago";
+        }
+    }
+}
+
+public class NewsFeed{
+    private ArrayList<IPost> posts;
+
+    public NewsFeed() {
+        posts = new ArrayList<>();
+    }
+
+    public void addPost(IPost post) {
+        posts.add(post);
+    }
+
+    public void show() {
+        for(IPost post : posts) {
+            post.display();
+            System.out.println();   // empty line between posts
+        }
+    }
+}
+
+```
+
+</details>
+

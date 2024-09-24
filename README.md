@@ -1527,8 +1527,6 @@ public class NewsFeed{
 
 ### Frage 5
 
-<img width="1203" alt="image" src="https://github.com/user-attachments/assets/e79b1831-8e91-42d4-8647-c6ae3e80ed13">
-
 <img width="927" alt="image" src="https://github.com/user-attachments/assets/fbbd1a24-21e6-4de9-97b3-bccb73b25ff5">
 
 
@@ -1538,10 +1536,19 @@ public class NewsFeed{
 
 ### Frage 7
 
-<img width="1215" alt="image" src="https://github.com/user-attachments/assets/e2bde6ba-e75e-439e-88cc-2969d134c488">
-
+<img width="927" alt="image" src="https://github.com/user-attachments/assets/604c8ec2-45d9-4fc8-9282-cc0896dc5cc2">
 
 ### Frage 8
+
+### Frage 9
+
+<img width="935" alt="image" src="https://github.com/user-attachments/assets/fa89a5e2-9333-47a8-8ecb-98a4c54451de">
+
+### Frage 10
+
+<img width="935" alt="image" src="https://github.com/user-attachments/assets/2e183ea8-9c00-41c6-8d4f-bc96bbcb68be">
+
+### Frage 11
 
 </details>
 

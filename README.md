@@ -1542,11 +1542,11 @@ public class NewsFeed{
 
 ### Frage 9
 
-<img width="935" alt="image" src="https://github.com/user-attachments/assets/fa89a5e2-9333-47a8-8ecb-98a4c54451de">
+<img width="459" alt="image" src="https://github.com/user-attachments/assets/988d01e7-696c-4165-8b6e-2872171c8322">
 
 ### Frage 10
 
-<img width="935" alt="image" src="https://github.com/user-attachments/assets/2e183ea8-9c00-41c6-8d4f-bc96bbcb68be">
+<img width="923" alt="image" src="https://github.com/user-attachments/assets/7588a189-05f7-4c17-98f5-8a39f8f96d4e">
 
 ### Frage 11
 

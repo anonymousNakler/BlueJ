@@ -1318,6 +1318,8 @@ public class DuckRace {
 
 ```
 
+</details>
+
 ## Test 10
 
 <Details>

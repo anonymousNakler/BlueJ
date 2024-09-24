@@ -1319,7 +1319,9 @@ public class DuckRace {
 ```
 
 ## Test 10
+
 <Details>
+    
   <summary>Test 10 </summary>
     
 ```java

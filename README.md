@@ -2145,4 +2145,130 @@ public class PhotoPost extends Post{
 
 ### Frage 12
 
+<Details>
+    <Summary> Code </Summary>
+
+```java
+import java.util.*;
+
+public abstract class Duck implements IDuck {
+    private final String name;
+    protected int distance=0;
+    public Duck (String name, int speed) {
+        this.name = name;
+    }
+    
+    public String getName() {
+		return name;
+    }
+    
+    public int getDistance() {
+	return distance;
+    }
+    
+    public String showData() {
+	return name+" Distance "+distance;
+    }
+    
+    protected abstract void specialRun();
+    
+    public void run () {
+        specialRun();
+    }
+}
+
+public class DuckRace {
+
+	private final int RACE_DISTANCE = 100;
+	private ArrayList<IDuck> ducks = new ArrayList<>();
+
+	public void race() {
+		while (!hasWinner()) {
+			ducksRun();
+		}
+	}
+
+	private boolean hasWinner() {
+		ArrayList<IDuck> bestDucks = new ArrayList<>();
+		int max = 0;
+		for (IDuck duck : ducks) {
+			if (duck.getDistance() > RACE_DISTANCE) {
+				if (duck.getDistance() > max) {
+					max = duck.getDistance();
+					bestDucks = new ArrayList<>();
+					bestDucks.add(duck);
+				} else if (duck.getDistance() == max) {
+					bestDucks.add(duck);
+				}
+			}
+		}
+		if (!bestDucks.isEmpty()) {
+			for (IDuck r: bestDucks) {
+				System.out.println(r.showData());
+			}
+		}
+
+		return !bestDucks.isEmpty();
+	}
+
+	private void ducksRun() {
+		for (IDuck duck : ducks) {
+			duck.run();
+		}
+	}
+	
+	public void addDuck (IDuck duck) {
+		ducks.add(duck);
+	}
+}
+
+public class RandomDuck extends Duck{
+        private static final int SPEED = 10;
+	private final Random random = new Random();
+	public RandomDuck(String name) {
+		super(name, 10);
+	}
+	@Override public void specialRun() {
+		distance += SPEED * random.nextDouble();
+	}
+	
+}
+
+public class TiringDuck extends Duck{
+	private int fatigue=0;
+	private final Random random = new Random();
+	private static final int SPEED = 10;
+	public TiringDuck(String name) {
+		super(name, 10);
+	}
+	public int getFatigue() {
+		return fatigue;
+	}
+	
+	
+	@Override public void specialRun() {
+		fatigue+= 2*random.nextDouble()*SPEED;
+		distance += SPEED - SPEED*( 1 - 100.0/(100+fatigue));
+	}
+}
+
+public class SittingDuck extends Duck{
+	private static final int SPEED = 0;
+	public SittingDuck(String name) {
+		super(name, 0);
+	}
+	
+	@Override public void specialRun() {
+	}
+}
+public interface IDuck {
+	String showData();
+	void run();
+	int getDistance();
+}
+```
+
 </details>
+
+</details>
+

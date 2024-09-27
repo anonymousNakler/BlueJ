@@ -2117,13 +2117,23 @@ public class PhotoPost extends Post{
 
 ### Frage 5
 
+<img width="592" alt="image" src="https://github.com/user-attachments/assets/e9969588-3d4c-47a3-81f9-fa1bf96bebd4">
+
 ### Frage 6
+
+<img width="581" alt="image" src="https://github.com/user-attachments/assets/d2048a19-41c5-4f0c-89d6-dc43e0c48015">
 
 ### Frage 7
 
+<img width="583" alt="image" src="https://github.com/user-attachments/assets/ef1c8d5e-8428-4450-8e1e-cb7cceef86fd">
+
 ### Frage 8
 
+<img width="591" alt="image" src="https://github.com/user-attachments/assets/0c48d041-081d-49d9-8774-dce975ca7b92">
+
 ### Frage 9
+
+<img width="602" alt="image" src="https://github.com/user-attachments/assets/1ba8b1bc-2846-4dd2-a454-76f9fcb94e8b">
 
 ### Frage 10
 
